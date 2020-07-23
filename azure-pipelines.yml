@@ -36,11 +36,3 @@ steps:
   inputs:
     PathtoPublish: $(build.artifactstagingdirectory)    
 
-
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'connection-to-MyTestRG-rg'
-    appType: 'webApp'
-    appName: '$(appName)'
-    package: '$(System.DefaultWorkingDirectory)/pipelines-java-function-master.zip'
-    deploymentMethod: 'auto'
